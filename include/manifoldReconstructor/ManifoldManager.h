@@ -3,11 +3,12 @@
 #ifndef MANIFOLDMANAGER_H_
 #define MANIFOLDMANAGER_H_
 
-//#include <Mesh.h>
-#include <types_reconstructor.hpp>
-#include <OutputCreator.h>
 #include <fstream>
 #include <iostream>
+
+#include <manifoldReconstructor/OutputCreator.h>
+#include <manifoldReconstructor/types_reconstructor.hpp>
+
 /**
 * This class provides the basic tools to manage the actual manifold creation, 
 * such as the region growing procedure, the manifoldness tests and the update of the

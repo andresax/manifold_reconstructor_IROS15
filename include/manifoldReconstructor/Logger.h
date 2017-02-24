@@ -8,10 +8,10 @@
 #ifndef UTILITIES_LOGGER_H_
 #define UTILITIES_LOGGER_H_
 
+#include <fstream>
+#include <string>
 #include <sys/time.h>
 #include <vector>
-#include <string>
-#include <fstream>
 
 namespace utilities {
 

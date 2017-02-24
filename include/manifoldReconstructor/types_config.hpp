@@ -16,12 +16,11 @@
 #ifndef TYPES_TEST_HPP_
 #define TYPES_TEST_HPP_
 
-#include <Eigen/Core>
 #include <sstream>
 #include <string>
 #include <vector>
 
-
+#include <Eigen/Core>
 
 typedef struct {
   std::string folderImage;

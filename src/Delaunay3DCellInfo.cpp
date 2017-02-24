@@ -5,7 +5,7 @@
  *      Author: andrea
  */
 
-#include <Delaunay3DCellInfo.h>
+#include <manifoldReconstructor/Delaunay3DCellInfo.h>
 
 Delaunay3DCellInfo::Delaunay3DCellInfo() {
   m_voteCount = 0;

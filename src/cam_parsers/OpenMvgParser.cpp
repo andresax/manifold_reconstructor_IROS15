@@ -5,11 +5,14 @@
  *      Author: andrea
  */
 
-#include <OpenMvgParser.h>
-#include <Exceptions.hpp>
+#include <manifoldReconstructor/OpenMvgParser.h>
+
 #include <stdexcept>
+
 #include <rapidjson/reader.h>
-#include <utilities.hpp>
+
+#include <manifoldReconstructor/Exceptions.hpp>
+#include <manifoldReconstructor/utilities.hpp>
 
 OpenMvgParser::OpenMvgParser(std::string path) {
   fileStream_.open(path.c_str());

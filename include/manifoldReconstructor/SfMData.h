@@ -8,8 +8,9 @@
 #ifndef CAM_PARSERS_SFMPARSER_H_
 #define CAM_PARSERS_SFMPARSER_H_
 
-#include <types_reconstructor.hpp>
-#include <glm.hpp>
+#include <glm/glm.hpp>
+
+#include <manifoldReconstructor/types_reconstructor.hpp>
 
 struct SfMData {
 

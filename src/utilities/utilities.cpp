@@ -1,8 +1,10 @@
-#include <utilities.hpp>
-#include <iostream>
+
+#include <manifoldReconstructor/utilities.hpp>
+
 #include <fstream>
-#include <string>
+#include <iostream>
 #include <sstream>
+#include <string>
 
 namespace utilities {
 

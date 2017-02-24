@@ -13,12 +13,14 @@
 //  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
 //  GNU General Public License for more details.
 
-#include <CamParser.h>
+#include <manifoldReconstructor/CamParser.h>
 
-#include <gtc/matrix_transform.hpp>
-#include <gtc/type_ptr.hpp>
 #include <sstream>
-#include <utilities.hpp>
+
+#include <glm/gtc/matrix_transform.hpp>
+#include <glm/gtc/type_ptr.hpp>
+
+#include <manifoldReconstructor/utilities.hpp>
 
 CamParser::CamParser(std::string fileName) : fileName_(fileName), numCameras_(0), numPoints_(0) {
   fileStream_.open(fileName_.c_str(),std::ios::in);

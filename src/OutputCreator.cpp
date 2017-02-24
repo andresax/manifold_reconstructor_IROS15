@@ -5,7 +5,8 @@
  *      Author: andrea
  */
 
-#include <OutputCreator.h>
+#include <manifoldReconstructor/OutputCreator.h>
+
 #include <ext/hash_map>
 #include <fstream>
 #include <iostream>

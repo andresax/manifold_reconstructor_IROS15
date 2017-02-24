@@ -20,22 +20,23 @@
 #define TYPES_RECONSTR_HPP_
 
 #include <string>
-#include <glm.hpp>
-#include <Eigen/Core>
-
-#include <CGAL/Exact_predicates_inexact_constructions_kernel.h>
-#include <CGAL/Delaunay_triangulation_2.h>
-#include <CGAL/Delaunay_triangulation_3.h>
-#include <CGAL/Triangulation_hierarchy_3.h>
-#include <CGAL/Triangulation_cell_base_with_info_3.h>
-#include <CGAL/Triangulation_vertex_base_with_info_3.h>
-#include <CGAL/Projection_traits_xy_3.h>
-#include <CGAL/intersections.h>
 
 #include <CGAL/algorithm.h>
+#include <CGAL/Delaunay_triangulation_2.h>
+#include <CGAL/Delaunay_triangulation_3.h>
+#include <CGAL/Exact_predicates_inexact_constructions_kernel.h>
+#include <CGAL/intersections.h>
+#include <CGAL/Projection_traits_xy_3.h>
+#include <CGAL/Triangulation_cell_base_with_info_3.h>
+#include <CGAL/Triangulation_hierarchy_3.h>
+#include <CGAL/Triangulation_vertex_base_with_info_3.h>
 
-#include <Delaunay3DCellInfo.h>
-#include <Delaunay3DVertexInfo.h>
+#include <Eigen/Core>
+
+#include <glm/glm.hpp>
+
+#include <manifoldReconstructor/Delaunay3DCellInfo.h>
+#include <manifoldReconstructor/Delaunay3DVertexInfo.h>
 
 typedef CGAL::Exact_predicates_inexact_constructions_kernel K;
 //typedef K::Point_3 Point;
