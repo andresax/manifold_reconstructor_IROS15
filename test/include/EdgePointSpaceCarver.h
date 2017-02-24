@@ -28,26 +28,25 @@
 // 3D point positions estimation, optimization algorithm (via Gauss-Newton)
 // and the run function calls the space carver (FreespaceDelaunayAlgorithm library)
 
-#include <opencv2/features2d/features2d.hpp>
+#include <CGAL/Delaunay_triangulation_3.h>
+#include <CGAL/Exact_predicates_inexact_constructions_kernel.h>
+#include <CGAL/Triangulation_3.h>
+
+#include <opencv2/calib3d/calib3d.hpp>
 #include <opencv2/core/core.hpp>
+#include <opencv2/features2d/features2d.hpp>
+#include <opencv2/gpu/gpu.hpp> // opencv2/core/cuda.hpp for opencv 3 
 #include <opencv2/highgui/highgui.hpp>
 #include <opencv2/imgproc/imgproc.hpp>
 #include <opencv2/video/tracking.hpp>
-#include <opencv2/calib3d/calib3d.hpp>
-#include <opencv2/gpu/gpu.hpp>
 
-#include <CGAL/Exact_predicates_inexact_constructions_kernel.h>
-#include <CGAL/Delaunay_triangulation_3.h>
-#include <CGAL/Triangulation_3.h>
-
-#include <ManifoldMeshReconstructor.h>
+#include <manifoldReconstructor/ManifoldMeshReconstructor.h>
+#include <manifoldReconstructor/types_config.hpp>
+#include <manifoldReconstructor/types_reconstructor.hpp>
 
 #include <KittiCamParser.h>
-
-#include <types_reconstructor.hpp>
-#include <types_config.hpp>
-#include <VideoSimulator.h>
 #include <Track.h>
+#include <VideoSimulator.h>
 
 //#define DEBUG_OPTIMIZATION_VERBOSE
 //#define DEBUG_OPTIMIZATION

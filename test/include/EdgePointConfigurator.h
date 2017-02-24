@@ -7,12 +7,13 @@
 
 #ifndef EDGEPOINTCONFIGURATOR_H_
 #define EDGEPOINTCONFIGURATOR_H_
-#include <string>
+
 #include <fstream>
 #include <iostream>
+#include <string>
 
-#include <utilities.hpp>
-#include <types_config.hpp>
+#include <manifoldReconstructor/types_config.hpp>
+#include <manifoldReconstructor/utilities.hpp>
 
 class EdgePointConfigurator {
 public:

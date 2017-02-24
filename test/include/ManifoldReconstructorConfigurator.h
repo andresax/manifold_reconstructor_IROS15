@@ -8,11 +8,12 @@
 #ifndef MANIFOLDRECONSTRUCTORCONFIGURATOR_H_
 #define MANIFOLDRECONSTRUCTORCONFIGURATOR_H_
 
-#include <string>
 #include <fstream>
 #include <iostream>
-#include <types_reconstructor.hpp>
-#include <types_config.hpp>
+#include <string>
+
+#include <manifoldReconstructor/types_config.hpp>
+#include <manifoldReconstructor/types_reconstructor.hpp>
 
 class ManifoldReconstructorConfigurator {
 public:

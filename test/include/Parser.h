@@ -13,44 +13,29 @@
 //  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
 //  GNU General Public License for more details.
 
-#ifndef KITTICAMPARSER_H_
-#define KITTICAMPARSER_H_
+#ifndef PARSER_H_
+#define PARSER_H_
 
-// This class read the camera calibrations files generated from the
-// KITTI dataset ground truth
-#include "Parser.h"
+// This class has to be extended with a class implementing the parsing function.
+// It provides camera calibration parameters and point positions
 
-#include <iostream>
 #include <fstream>
+#include <iostream>
 #include <vector>
-
 
 #include <Eigen/Core>
 
-struct Camera {
-    Eigen::Matrix3f R;
-    Eigen::Vector3f t;
-    float fx;
-    float fy;
-    float cx;
-    float cy;
-    float k1;
-    float k2;
-    float k3;
-    float k4;
-    float k5;
-    //camera center
-    Eigen::Vector3f center;
+#include <manifoldReconstructor/types_config.hpp>
+#include <manifoldReconstructor/types_reconstructor.hpp>
 
-    std::vector<int> viewingPointsIndices;
-};
-class KittiCamParser {
+
+class Parser {
   public:
-    KittiCamParser(std::string fileInput);
-    virtual ~KittiCamParser();
-    bool parseFile();
+    Parser(std::string fileInput) : fileName_(fileInput), numCameras_(0), numPoints_(0){}
+    virtual ~Parser() {};
+    virtual bool parseFile() = 0;
 
-    const std::vector<Camera>& getCamerasList() const {
+    const std::vector<SensorParser>& getCamerasList() const {
       return camerasList_;
     }
 
@@ -70,7 +55,9 @@ protected:
     std::ifstream fileStream_;
     int numCameras_;
     int numPoints_;
-    std::vector<Camera> camerasList_;
+
+    std::vector<SensorParser> camerasList_;
     std::vector<PointParser> pointsList_;
 };
-#endif /* KITTICAMPARSER_H_ */
+
+#endif /* PARSER_H_ */

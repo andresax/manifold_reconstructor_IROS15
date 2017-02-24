@@ -6,7 +6,8 @@
  */
 
 #include <ReconstructFromSfMData.h>
-#include <utilities.hpp>
+
+#include <manifoldReconstructor/utilities.hpp>
 
 ReconstructFromSfMData::ReconstructFromSfMData(const SfMData &sfm_data, ManifoldReconstructionConfig& manifConf) {
   sfm_data_ = sfm_data;

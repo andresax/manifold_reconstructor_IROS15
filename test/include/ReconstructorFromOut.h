@@ -8,12 +8,15 @@
 #ifndef RECONSTRUCTORFROMOUT_H_
 #define RECONSTRUCTORFROMOUT_H_
 
-#include <PointsParserFromOut.h>
-#include <ManifoldMeshReconstructor.h>
+
 #include <fstream>
 #include <iostream>
 #include <vector>
-#include <glm.hpp>
+
+#include <glm/glm.hpp>
+
+#include <manifoldReconstructor/ManifoldMeshReconstructor.h>
+#include <manifoldReconstructor/PointsParserFromOut.h>
 
 
 class ReconstructorFromOut {

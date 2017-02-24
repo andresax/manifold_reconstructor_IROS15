@@ -14,6 +14,7 @@
 //  GNU General Public License for more details.
 
 #include "VideoSimulator.h"
+
 #include <iostream>
 
 VideoSimulator::VideoSimulator(VideoConfig videoConfig) {
