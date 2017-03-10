@@ -15,22 +15,28 @@
 
 #include <string>
 
-#include <PathCreator.h>
-//#include <KittiRectifiedCamParser.h>
+#include <manifoldReconstructor/types_reconstructor.hpp>
+#include <manifoldReconstructor/OpenMvgParser.h>
+
 #include <ManifoldReconstructorConfigurator.h>
+#include <PathCreator.h>
+#include <ReconstructFromSfMData.h>
+#include <ReconstructorFromOut.h>
 //#include <EdgePointConfigurator.h>
 //#include <EdgePointSpaceCarver.h>
-#include <ReconstructorFromOut.h>
-#include <types_reconstructor.hpp>
-#include <OpenMvgParser.h>
-#include <ReconstructFromSfMData.h>
+//#include <KittiRectifiedCamParser.h>
 
 //*************************************************************************************************/
 //********************************RECONSTRUCTION FROM VISIBILITY***********************************/
 //*************************************************************************************************/
 int main(int argc, char **argv) {
-//  OpenMvgParser op("/home/andrea/Scrivania/Datasets/Middelbury/templeRing/openmvgMatch/out.json");
-  OpenMvgParser op("data/0095/0095.json");
+
+  if (argc < 2) {
+    std::cout << "Please provide as parameter the json file on which work" << std::endl;
+    return 0;
+  }
+
+  OpenMvgParser op(argv[1]);
 
   op.parse();
   //utilities::saveVisibilityPly(op.getSfmData());

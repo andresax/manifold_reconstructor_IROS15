@@ -13,28 +13,28 @@
 //  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
 //  GNU General Public License for more details.
 
-#ifndef PARSER_H_
-#define PARSER_H_
 
-// This class has to be extended with a class implementing the parsing function.
-// It provides camera calibration parameters and point positions
+// This class read the rectified camera calibrations files generated from the
+// KITTI dataset ground truth
+#ifndef KITTIRECTIFIEDCAMPARSER_H_
+#define KITTIRECTIFIEDCAMPARSER_H_
 
-#include <Eigen/Core>
-
-#include <iostream>
 #include <fstream>
+#include <iostream>
+#include <string>
 #include <vector>
-#include <types_reconstructor.hpp>
-#include <types_config.hpp>
+
+#include <manifoldReconstructor/types_config.hpp>
+#include <manifoldReconstructor/types_reconstructor.hpp>
 
 
-class Parser {
+class KittiRectifiedCamParser {
   public:
-    Parser(std::string fileInput) : fileName_(fileInput), numCameras_(0), numPoints_(0){}
-    virtual ~Parser() {};
-    virtual bool parseFile() = 0;
+    KittiRectifiedCamParser(std::string fileInput);
+    virtual ~KittiRectifiedCamParser();
+    bool parseFile();
 
-    const std::vector<SensorParser>& getCamerasList() const {
+    const std::vector<CameraRect>& getCamerasList() const {
       return camerasList_;
     }
 
@@ -49,14 +49,12 @@ class Parser {
     const std::vector<PointParser>& getPointsList() const {
       return pointsList_;
     }
-protected:
+  protected:
     std::string fileName_;
     std::ifstream fileStream_;
     int numCameras_;
     int numPoints_;
-
-    std::vector<SensorParser> camerasList_;
+    std::vector<CameraRect> camerasList_;
     std::vector<PointParser> pointsList_;
 };
-
-#endif /* PARSER_H_ */
+#endif /* KITTIRECTIFIEDCAMPARSER_H_ */

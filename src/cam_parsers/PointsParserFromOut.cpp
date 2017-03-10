@@ -5,9 +5,9 @@
  *      Author: andrea
  */
 
-#include <PointsParserFromOut.h>
+#include <manifoldReconstructor/PointsParserFromOut.h>
 
-#include <types_reconstructor.hpp>
+#include <manifoldReconstructor/types_reconstructor.hpp>
 
 PointsParserFromOut::PointsParserFromOut(std::string path, int imageW, int imageH) {
   numPoints_ = -1;

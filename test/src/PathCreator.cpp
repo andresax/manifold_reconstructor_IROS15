@@ -5,9 +5,9 @@
  *      Author: andrea
  */
 
+#include <boost/filesystem.hpp>
 
 #include <PathCreator.h>
-#include <boost/filesystem.hpp>
 
 PathCreator::PathCreator(SpaceCarvingConfig spaceCarvingConfig, std::string prefix, std::string numKitti) {
   spaceCarvingConfig_ = spaceCarvingConfig;

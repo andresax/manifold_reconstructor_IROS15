@@ -7,21 +7,21 @@ project(manifoldReconstructor)
 set(CMAKE_MODULE_PATH ${PROJECT_SOURCE_DIR}/cmake/modules)  
   
 # ----------------------- LIBRARIES ---------------------------
+
 find_package(Boost COMPONENTS filesystem system REQUIRED)
 find_package(OpenCV REQUIRED)
 find_package(CGAL REQUIRED)
 find_package(Eigen3 REQUIRED)
 
 # ----------------------- INCLUDES ----------------------------
-include_directories(  ${EIGEN3_INCLUDE_DIR}
+include_directories( ${EIGEN3_INCLUDE_DIR}
                       ${GMPXX_INCLUDE_DIR}
                       ${OpenCV_INCLUDE_DIRS} 
                       ${CGAL_INCLUDE_DIRS}
-                      external/glm/glm/
                       external/
-                      include/manifoldReconstructor/
-                      include/test/
+                      include/
                       ) 
+
 # ----------------------- GCC FLAGS ----------------------------
 
 set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=c++11 -fpermissive")
@@ -30,26 +30,20 @@ set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=c++11 -fpermissive")
 
 # ------------------------ BUILD -------------------------------
 
-file(GLOB_RECURSE meshRec_SOURCE 
+file(GLOB_RECURSE meshlib_SOURCE 
                   src/*.cpp
                   src/cam_parsers/*.cpp
-                  src/utilities/*.cpp
-                  test/*.cpp
-                  )
+                  src/utilities/*.cpp )
 
-add_executable(manifoldReconstructor ${meshRec_SOURCE})
-target_link_libraries(manifoldReconstructor ${OpenCV_LIBS} 
-                                            ${GMPXX_LIBRARIES}
-                                            ${GMP_LIBRARIES}
-                                            ${LAPACK_LIBRARIES}
-                                            ${CGAL_LIBRARY}
-                                            ${Boost_LIBRARIES}
-                                            ${ASSIMP_LIBRARIES}  )
 
+
+add_library(manifoldReconstructor SHARED ${meshlib_SOURCE})
 
 # ------------------------ INSTALLATION ------------------------
 
+install(TARGETS manifoldReconstructor DESTINATION lib)
+install(DIRECTORY external/glm/glm/ DESTINATION include/glm)
+install(DIRECTORY include/manifoldReconstructor/ DESTINATION include/manifoldReconstructor )
+install(DIRECTORY external/rapidjson/ DESTINATION include/rapidjson/)
 
 # --------------------------------------------------------------
-
-

@@ -14,16 +14,20 @@
 //  GNU General Public License for more details.
 
 #include "EdgePointSpaceCarver.h"
+
+#include <fstream>
 #include <iostream>
 #include <list>
-#include <fstream>
-#include <drawingUtilities.hpp>
-#include <conversionUtilities.hpp>
-#include <omp.h>
-#include <sys/time.h>
 #include <sstream>
+#include <sys/time.h>
+
+#include <omp.h>
+
 #include <opencv2/core/eigen.hpp>
-#include <utilities.hpp>
+
+#include <manifoldReconstructor/drawingUtilities.hpp>
+#include <manifoldReconstructor/conversionUtilities.hpp>
+#include <manifoldReconstructor/utilities.hpp>
 
 // Domain
 

@@ -8,14 +8,16 @@
 #ifndef MANIFOLDMESHRECONSTRUCTOR_H_
 #define MANIFOLDMESHRECONSTRUCTOR_H_
 
-#include <types_reconstructor.hpp>
-#include <types_config.hpp>
-#include <Logger.h>
-#include <vector>
-#include <ManifoldManager.h>
-#include <OutputCreator.h>
 #include <fstream>
 #include <iostream>
+#include <vector>
+
+#include <manifoldReconstructor/Logger.h>
+#include <manifoldReconstructor/ManifoldManager.h>
+#include <manifoldReconstructor/OutputCreator.h>
+#include <manifoldReconstructor/types_config.hpp>
+#include <manifoldReconstructor/types_reconstructor.hpp>
+
 /**
 * This class provides the API to manage the 2-manifold creation as explained in the 
 * paper:

@@ -1,5 +1,5 @@
-#include <conversionUtilities.hpp>
 
+#include <manifoldReconstructor/conversionUtilities.hpp>
 
 
 Eigen::Matrix4f conversionUtilities::toEigenMatrix(glm::mat4 mat) {

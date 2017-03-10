@@ -8,9 +8,11 @@
 #ifndef OUTPUTCREATOR_H_
 #define OUTPUTCREATOR_H_
 
-#include <types_reconstructor.hpp>
 #include <string>
 #include <vector>
+
+#include <manifoldReconstructor/types_reconstructor.hpp>
+
 
 class OutputCreator {
 public:

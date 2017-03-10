@@ -9,6 +9,7 @@
 #define DELAUNAY3DVERTEXINFO_H_
 
 #include <vector>
+
 class Delaunay3DVertexInfo {
 
 public:

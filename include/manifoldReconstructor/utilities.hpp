@@ -1,14 +1,17 @@
 #ifndef UTILITIES_HPP_
 #define UTILITIES_HPP_
 
-#include <opencv2/core/core.hpp>
 #include <iostream>
 #include <sstream>
-#include <vector>
-#include <glm.hpp>
 #include <string>
-#include <types_reconstructor.hpp>
-#include <SfMData.h>
+#include <vector>
+
+#include <glm/glm.hpp>
+
+#include <opencv2/core/core.hpp>
+
+#include <manifoldReconstructor/SfMData.h>
+#include <manifoldReconstructor/types_reconstructor.hpp>
 
 namespace utilities {
 /*compute the Euclidean distance among differen tpes of points*/

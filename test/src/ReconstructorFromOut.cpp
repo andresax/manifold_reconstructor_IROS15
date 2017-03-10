@@ -6,10 +6,10 @@
  */
 
 #include <ReconstructorFromOut.h>
-#include <conversionUtilities.hpp>
 
-#include <utilities.hpp>
-#include <types_reconstructor.hpp>
+#include <manifoldReconstructor/conversionUtilities.hpp>
+#include <manifoldReconstructor/types_reconstructor.hpp>
+#include <manifoldReconstructor/utilities.hpp>
 
 ReconstructorFromOut::ReconstructorFromOut() {
 

@@ -23,8 +23,8 @@
 #include <opencv2/core/core.hpp>
 #include <opencv2/highgui/highgui.hpp>
 
-#include <types_reconstructor.hpp>
-#include <types_config.hpp>
+#include <manifoldReconstructor/types_config.hpp>
+#include <manifoldReconstructor/types_reconstructor.hpp>
 
 class VideoSimulator {
   public:

@@ -5,12 +5,13 @@
  *      Author: andrea
  */
 
-#include <ManifoldManager.h>
-#include <utilities.hpp>
+#include <manifoldReconstructor/ManifoldManager.h>
 
-#include <OutputCreator.h>
-#include <sstream>
 #include <iostream>
+#include <sstream>
+
+#include <manifoldReconstructor/OutputCreator.h>
+#include <manifoldReconstructor/utilities.hpp>
 
 ManifoldManager::ManifoldManager(Delaunay3 &dt, bool inverseConic, float probabTh) :
     dt_(dt) {

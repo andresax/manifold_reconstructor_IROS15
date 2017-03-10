@@ -22,8 +22,9 @@
 #include <sstream>
 #include <string>
 
-#include <types_config.hpp>
 #include <glm.hpp>
+
+#include <manifoldReconstructor/types_config.hpp>
 
 typedef struct {
   std::string pathInitMesh;

@@ -5,7 +5,7 @@
  *      Author: andrea
  */
 
-#include <Delaunay3DVertexInfo.h>
+#include <manifoldReconstructor/Delaunay3DVertexInfo.h>
 
 Delaunay3DVertexInfo::Delaunay3DVertexInfo() {
   used_ = 0;

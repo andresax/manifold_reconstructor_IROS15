@@ -13,28 +13,44 @@
 //  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
 //  GNU General Public License for more details.
 
+#ifndef KITTICAMPARSER_H_
+#define KITTICAMPARSER_H_
 
-// This class read the rectified camera calibrations files generated from the
+// This class read the camera calibrations files generated from the
 // KITTI dataset ground truth
-#ifndef KITTIRECTIFIEDCAMPARSER_H_
-#define KITTIRECTIFIEDCAMPARSER_H_
 
-#include <iostream>
-#include <string>
-#include <vector>
 #include <fstream>
+#include <iostream>
+#include <vector>
 
-#include <types_reconstructor.hpp>
-#include <types_config.hpp>
+#include <Eigen/Core>
 
+#include "Parser.h"
 
-class KittiRectifiedCamParser {
+struct Camera {
+    Eigen::Matrix3f R;
+    Eigen::Vector3f t;
+    float fx;
+    float fy;
+    float cx;
+    float cy;
+    float k1;
+    float k2;
+    float k3;
+    float k4;
+    float k5;
+    //camera center
+    Eigen::Vector3f center;
+
+    std::vector<int> viewingPointsIndices;
+};
+class KittiCamParser {
   public:
-    KittiRectifiedCamParser(std::string fileInput);
-    virtual ~KittiRectifiedCamParser();
+    KittiCamParser(std::string fileInput);
+    virtual ~KittiCamParser();
     bool parseFile();
 
-    const std::vector<CameraRect>& getCamerasList() const {
+    const std::vector<Camera>& getCamerasList() const {
       return camerasList_;
     }
 
@@ -49,12 +65,12 @@ class KittiRectifiedCamParser {
     const std::vector<PointParser>& getPointsList() const {
       return pointsList_;
     }
-  protected:
+protected:
     std::string fileName_;
     std::ifstream fileStream_;
     int numCameras_;
     int numPoints_;
-    std::vector<CameraRect> camerasList_;
+    std::vector<Camera> camerasList_;
     std::vector<PointParser> pointsList_;
 };
-#endif /* KITTIRECTIFIEDCAMPARSER_H_ */
+#endif /* KITTICAMPARSER_H_ */

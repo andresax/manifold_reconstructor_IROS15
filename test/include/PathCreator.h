@@ -8,12 +8,11 @@
 #ifndef PATHCREATOR_H_
 #define PATHCREATOR_H_
 
-
-
-#include <string>
 #include <iostream>
-#include <types_reconstructor.hpp>
-#include <types_config.hpp>
+#include <string>
+
+#include <manifoldReconstructor/types_config.hpp>
+#include <manifoldReconstructor/types_reconstructor.hpp>
 
 class PathCreator {
   public:

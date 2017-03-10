@@ -13,10 +13,12 @@
 //#define HEURISTIC_K 1
 
 
-#include <Eigen/Core>
 #include <set>
 #include <vector>
-#include <glm.hpp>
+
+#include <Eigen/Core>
+
+#include <glm/glm.hpp>
 
 
 

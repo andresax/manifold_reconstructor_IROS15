@@ -5,11 +5,14 @@
  *      Author: andrea
  */
 
-#include <ManifoldMeshReconstructor.h>
-#include <vector>
-#include <utilities.hpp>
+#include <manifoldReconstructor/ManifoldMeshReconstructor.h>
+
 #include <Eigen/Core>
 #include <Eigen/Eigen>
+
+#include <vector>
+
+#include <manifoldReconstructor/utilities.hpp>
 
 ManifoldMeshReconstructor::ManifoldMeshReconstructor(ManifoldReconstructionConfig conf) {
   conf_ = conf;

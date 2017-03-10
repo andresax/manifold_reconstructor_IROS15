@@ -9,6 +9,7 @@
 #define TRACK_H_
 
 #include <opencv2/core/core.hpp>
+
 /*
  * It models one track of measures, its current 3D position */
 class Track {

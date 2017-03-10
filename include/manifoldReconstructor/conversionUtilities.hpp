@@ -19,12 +19,16 @@
 // This header provides the functions that converts a Matrix from the
 // FreespaceDelaunayAlgorithm matrix convention to the Eigen ones
 #include <Eigen/Core>
+
+#include <glm/glm.hpp>
+
 #include <opencv2/core/core.hpp>
-#include <glm.hpp>
 
 namespace conversionUtilities {
+
 Eigen::Matrix4f toEigenMatrix(glm::mat4 mat);
 cv::Mat toOpenCVMatrix(glm::mat4 mat, bool cameraMat4x4 = true);
+
 }  // namespace conversionUtilities
 
 

@@ -19,13 +19,14 @@
 #ifndef CAMPARSER_H_
 #define CAMPARSER_H_
 
-#include <iostream>
 #include <fstream>
+#include <iostream>
 #include <vector>
-#include <types_reconstructor.hpp>
-#include <types_config.hpp>
 
-#include <glm.hpp>
+#include <glm/glm.hpp>
+
+#include <manifoldReconstructor/types_config.hpp>
+#include <manifoldReconstructor/types_reconstructor.hpp>
 
 class CamParser {
   public:
